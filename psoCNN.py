@@ -249,7 +249,7 @@ class psoCNN:
                 hist = self.population.particle[j].model_fit(self.x_train, self.y_train, batch_size=self.batch_size, epochs=self.epochs)
                 self.population.particle[j].model_delete()
 
-                self.population.particle[j].acc = hist.history['acc'][-1]
+                self.population.particle[j].acc = hist.history['accuracy'][-1]
                 
                 f_test = self.population.particle[j].acc
                 pBest_acc = self.population.particle[j].pBest.acc
